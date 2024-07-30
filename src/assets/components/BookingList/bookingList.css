@@ -1,0 +1,19 @@
+
+.booking_list{
+    background-color: rgb(245, 245, 245);
+    position: relative;
+    top: 80px;
+    min-height: 100vh;
+}
+.booking_list h2{
+    text-align: center;
+    position: relative;
+    top: 30px;
+    font-weight: 800;
+}
+.booking_list h3{
+    position: relative;
+    top: 100px;
+    text-align: center;
+}
+

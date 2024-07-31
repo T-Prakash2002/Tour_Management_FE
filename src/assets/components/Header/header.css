@@ -4,7 +4,7 @@
     line-height: 80px;
     position:sticky !important;
     top: 1px;
-    z-index: 1;
+    z-index: 11;
     background-color: #fff;
     box-shadow: 0 0 6px 2px rgb(129, 125, 125);
     border-radius: 0 0 10px 10px;

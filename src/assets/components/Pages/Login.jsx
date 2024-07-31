@@ -35,7 +35,7 @@ const handleClick = async(e)=>{
       dispatch({ type: "LOGIN_SUCCESS", payload: response.data });
       alert("Login Successful");
 
-      navigate(-1);
+      navigate('/');
     }else{
       dispatch({ type: "LOGIN_FAILURE", payload: response.data });
     }

@@ -8,52 +8,48 @@ import axios from "axios";
 
 const BookingList = () => {
   const { user } = useContext(AuthContext);
-  const [bookingList, setBookingList] = useState([]); 
+  const [bookingList, setBookingList] = useState([]);
 
   const { token } = user;
   const { email } = user.data;
 
-
   useEffect(() => {
-
     const fetchBookingList = async (email) => {
       const res = await axios.get(`${BASE_URL}/bookings/user/${email}`, {
         headers: {
           Authorization: `${token}`,
-        }
+        },
       });
       return res;
     };
 
-    if(user){
-      fetchBookingList(email).then(res => {
+    if (user) {
+      fetchBookingList(email).then((res) => {
         setBookingList(res.data.data);
       });
     }
-
   }, []);
 
-  console.log(bookingList);
+
+
 
   return (
     <div className="booking_list">
       <Container>
         {user ? (
-          <Row>
-            <Col sm='12' md='12' lg='12'>
+          <>
+            <Row>
+              <Col sm="12" md="12" lg="12">
                 <h2>Booking List</h2>
-            </Col>
-            <Col>
-              <div className="booking_list_card">
-                {
-                    bookingList && bookingList.map(booking => (
-                      <BookingListCard key={booking.id} booking={booking} />
-                    ))
-                }
-                
-              </div>
-            </Col>
-          </Row>
+              </Col>
+            </Row>
+            <Row className="booking_list_card">
+              {bookingList &&
+                bookingList.map((booking,index) => (
+                    <BookingListCard booking={booking} bookingList={bookingList} setBookingList={setBookingList} key={index}/>
+                ))}
+            </Row>
+          </>
         ) : (
           <Row>
             <Col>

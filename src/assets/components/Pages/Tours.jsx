@@ -2,8 +2,6 @@ import React, { useState, useEffect } from "react";
 import { Container, Row, Col } from "reactstrap";
 import CommonSection from "../shared/CommonSection";
 import "../styles/tour.css";
-import tourdata from "../data/tours";
-import Newsletter from "../shared/Newsletter";
 import TourCard from "../shared/TourCard";
 import SearchBar from "../shared/SearchBar";
 
@@ -76,7 +74,6 @@ const Tours = () => {
           )}
         </Container>
       </section>
-      <Newsletter />
     </>
   );
 };

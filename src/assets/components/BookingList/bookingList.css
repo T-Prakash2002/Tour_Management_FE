@@ -1,9 +1,9 @@
 
 .booking_list{
     background-color: rgb(245, 245, 245);
-    position: relative;
-    top: 80px;
     min-height: 100vh;
+
+    
 }
 .booking_list h2{
     text-align: center;
@@ -15,5 +15,39 @@
     position: relative;
     top: 100px;
     text-align: center;
+}
+.booking_list_card{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    position: relative;
+    top: 100px;
+
+}
+
+.booking_list_card .booking_card{
+    padding: 20px 40px;
+    width: 18rem;
+}
+
+.booking_card .card-title{
+    font-size: 20px ;
+    font-weight: 700;
+}
+.card-text{
+    padding-top: 10px;
+    font-weight: 700;
+}
+.card-text strong{
+    color: #4d4848;
+    font-weight: 600;
+}
+.booking_update_form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
 }
 

@@ -10,6 +10,7 @@ import { AuthContext } from "../../../context/context";
 
 const Booking = ({ tour, avgRating }) => {
     const {
+    _id,
     photo,
     title,
     desc,
@@ -20,6 +21,7 @@ const Booking = ({ tour, avgRating }) => {
     distance,
     maxGroupSize,
   } = tour;
+
 
     const navigate = useNavigate();
 
@@ -33,6 +35,8 @@ const Booking = ({ tour, avgRating }) => {
         phone: "",
         guestSize: 1,
         bookAt: "",
+        price: price,
+        tourId: _id,
     });
 
 
@@ -60,6 +64,8 @@ const Booking = ({ tour, avgRating }) => {
             tourName: title,
             guestSize: credientials.guestSize,
             bookAt: credientials.bookAt,
+            price: credientials.price,
+            tourId: credientials.tourId,
         }
 
         const response = await axios.post(`${BASE_URL}/booking`, bookingObj, {
@@ -102,6 +108,7 @@ const Booking = ({ tour, avgRating }) => {
                             type="text"
                             placeholder="Full Name"
                             id="fullName"
+                            value={credientials.fullName}
                             required
                             onChange={handleChange}
                         />
@@ -110,6 +117,7 @@ const Booking = ({ tour, avgRating }) => {
                         <input
                             type="number"
                             placeholder="Phone"
+                            value={credientials.phone}  
                             id="phone"
                             required
                             onChange={handleChange}
@@ -120,6 +128,7 @@ const Booking = ({ tour, avgRating }) => {
                             type="date"
                             placeholder=""
                             id="bookAt"
+                            value={credientials.bookAt} 
                             required
                             onChange={handleChange}
                         />
@@ -127,6 +136,7 @@ const Booking = ({ tour, avgRating }) => {
                             type="number"
                             placeholder="Guest"
                             id="guestSize"
+                            value={credientials.guestSize}
                             min={1}
                             max={maxGroupSize}
                             required

@@ -46,17 +46,6 @@ const BookingListCard = ({ booking, setBookingList, bookingList }) => {
   };
 
 
-    const bookingList = await res.data.booking;
-
-    setBookingList(() => {
-      return bookingList.map((booking) => {
-        if (booking._id === id) {
-          return res.data.booking;
-        }
-        return booking;
-      });
-    });
-  };
 
   return (
     <div className="booking_card card col-12 col-sm-4 col-md-4 col-lg-3">

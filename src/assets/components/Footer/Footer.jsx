@@ -45,7 +45,7 @@ const year = new Date().getFullYear()
       <Row>
         <Col lg='3'>
            <div className="logo">
-            <img src={logo} alt="" />
+              <i className="fs-4 fw-bold logo">Tour</i>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati corrupti, voluptate culpa repudiandae similique beatae velit.!
             </p>
             <div className="social_links d-flex align-items-center gap-4">

@@ -2,7 +2,6 @@ import React, { useRef, useEffect,useContext } from "react";
 import { Container, Row, Button } from "reactstrap";
 import { NavLink, Link,useNavigate } from "react-router-dom";
 import "./header.css";
-import logo from "../images/logo.png";
 import { AuthContext } from "../../../context/context";
 
 
@@ -38,7 +37,7 @@ const navigate = useNavigate();
           <div className="nav_wrapper d-flex align-items-center justify-content-between">
             {/*-------logo--------*/}
             <div className="logo">
-              <img src={logo} alt="" />
+              <i className="fs-4 fw-bold logo">Tour</i>
             </div>
             {/*-------logo end--------*/}
             {/*-------MENU START--------*/}
